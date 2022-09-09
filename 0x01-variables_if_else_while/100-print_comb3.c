@@ -1,22 +1,36 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 /**
- * main - print 00 to 99
- *
- * Return: zero
+ * main - main block
+ * Description: Write a program that prints all possible
+ * Return: 0
  */
 int main(void)
 {
-	int i;
+	int c;
+	int d = 0;
 
-	for (i = 0; i <= 99; i++)
+	while (d < 10)
 	{
-		putchar((i / 10) + '0');
-		putchar((i % 10) + '0');
-		if (i == 99)
-			break;
-		putchar(',');
-		putchar(' ');
+		c = 0;
+		while (c < 10)
+		{
+			if (d != c && d < c)
+			{
+				putchar('0' + d);
+				putchar('0' + c);
+
+				if (c + d != 17)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+
+			c++;
+
+		}
+		d++;
 	}
 	putchar('\n');
 	return (0);
