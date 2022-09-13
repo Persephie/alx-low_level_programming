@@ -4,7 +4,7 @@
  * times_table - prints times table
  * Return:void
  */
-void times_tables(void)
+void times_table(void)
 {
 	int n;
 	int i;
