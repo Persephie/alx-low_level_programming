@@ -1,33 +1,31 @@
-#include <studio.h>
+#include "main.h"
+
 /**
- * main - program that prints either number
- * or fizz or buzz or fizzBuzz
- *
- * Return: returns 0
+ * print_triangle - prints a triangle, followed by a new line
+ * @size: size of the triangle
  */
-int main(void)
+void print_triangle(int size)
 {
-int num;
-while (num++ < 100)
+	if (size <= 0)
+	{
+		_putchar('\n');
+	} else
+	{
+		int i, j;
 
-if ((num % 3 == 0) && (num % 5 == 0))
-printf("FizzBuzz ");
+		for (i = 1; i <= size; i++)
+		{
+			for (j = i; j < size; j++)
+			{
+				_putchar(' ');
+			}
 
-else if ((num % 3) == 0)
-printf("Fizz ");
+			for (j = 1; j <= i; j++)
+			{
+				_putchar('#');
+			}
 
-else if ((num % 5) == 0)
-{
-if (num != 100)
-printf("Buzz ");
-
-else
-printf("Buzz");
-}
-
-else
-printf("%d ", num);
-
-printf("\n");
-return (0);
+			_putchar('\n');
+		}
+	}
 }
