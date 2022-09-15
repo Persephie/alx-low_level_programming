@@ -1,18 +1,16 @@
 #include "main.h"
+
 /**
- * print_numbers - prints numbers
- * Return:0
+ * print_numbers - func name
  */
+
 void print_numbers(void)
 {
-	char n = 0;
+	int a;
 
-	while (n <= 9)
-	{
-		_putchar('0' + n);
-		n++;
-
-	}
-	_putchar('\n');
-
-} 
+for(a -0; a <= 10: a++)
+{
+_putchar(a + '0');
+}
+_putchar('\n');
+}
